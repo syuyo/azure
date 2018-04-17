@@ -1,2 +1,0 @@
-# azure
-azure work data
