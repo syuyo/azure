@@ -1,0 +1,329 @@
+﻿工数　確認　
+
+見積
+
+1.5倍　
+150　
+20%プロジェクト費用 
+0.5の購入監視・カスタマイズ保守？
+
+-----------------
+
+■ERS　機能一覧
+https://desknets.ivp.co.jp/cgi-bin/dneo/zdoc.cgi?cmd=docindex#cmd=docrefer&id=3&folder=13
+
+■ERS　管理画面マニュアル
+https://desknets.ivp.co.jp/cgi-bin/dneo/zdoc.cgi?cmd=docindex#cmd=docrefer&id=57&folder=12
+
+
+--------
+
+phili　IP
+121.97.247.23
+180.232.105.154
+
+
+
+----
+
+BO
+
+----
+内部：
+・テスト環境のみ、たまにはjs読み込み出来ない　→　社内検討
+
+・コーディング環境はアクセスできない
+
+//////////////////////////////
+
+---　
+
+・英語翻訳について
+
+
+Not specified
+
+<message name="10203">This page has been expired. \r\n Please go through the procedure again from home page\r\n\r\n&lt;a href='{0}'&gt;]Return to Home&lt;/a&gt;</message>
+
+<message name="20215">To use the entered coupon, the amount of the subtotal (tax included) must be more than {0} ●.</message>
+
+★キャッシュ　キレ　の文言　OK？
+
+★簡体・繁体サイトも二つサーバー運用調整
+
+★
+簡体・繁体出庫リスcsvデータに、国名が問題あるそう
+簡体→国名は繁体になる
+繁体は？
+
+★
+簡体・繁体検索0画面はNG
+
+ーーー先方確認ーーーー
+
+★アプラス　送料の問題
+
+・簡体・繁体サイト日付の形式は？英語サイトと同じ？
+
+・簡体・繁体サイト件数は以前決めた仕様と同じ、40 80 120　OK？
+
+・簡体繁体サイト、本番環境ネクストエンジン送信先？英語と同じ？
+
+------------
+
+■日本語サイト
+・伝票検索エラー
+該当伝票を呼び出したのち、紐付く伝票明細をさらに呼び出す際に、
+同じ商品番号・同じ価格・同じお届け希望日の明細が複数行存在した場合に出力されたので、
+伝票検索する時に、エラーになりました。 ？
+
+
+
+
+ーー新着判定についてーーー
+
+
+新着判定：
+・「更新日」ベース（ＵＰ日ではなく）
+　　・本日を含む３日間
+
+--------entry4の話---------
+
+
+
+お疲れ様です。
+
+以前、下記の件がありました。
+https://192.168.100.219/issues/55673
+
+「同一ページであったとしてもGoogleAnalyticsへの送信情報を動的に変動させることにより、
+URLやページタイトルを任意の値でで集計させる事が可能となるようです。」
+という案で、先方に案内しました。
+
+先方は、完了ページentry4.htmに、下記のタグを追加しました。
+  ga('send', 'pageview',{
+    'page' : '/top/register/asp/entry5.asp',
+    'title': '注文完了 オンラインストア'
+
+で、完了画面entry4.htmに到着の場合は、GA側は、注文完了という集計は可能です。
+
+
+paypal、代引、銀行振込、クレジットカード（普通）決済して、注文完了の場合は、
+GAに情報を送信できる、集計可能ですが、
+
+alipay、クレジットカード（3dセキュア）、ショピングクレジット（アプラス・オリコ）という外部決済画面に遷移の場合は、
+注文完了した場合も、GA側記録がないです。
+
+一応paypalも外部決済画面に遷移しますが、区別は、
+alipay、クレジットカード（3dセキュア）、アプラス・オリコの場合は、外部画面到着する前に、
+瞬間に、リダイレクトページに遷移します。
+
+下記は、各リダイレクト用HTMLファイル
+・3Dセキュアリダイレクト用HTML
+　Views\Partial\gmo_3d_secure.htm
+
+　・アリペイ用リダイレクトHTML
+　Views\Partial\gmo_alipay.htm
+
+　・オリコ用リダイレクトHTML
+　Views\Partial\orico.htm
+
+　・アプラス用リダイレクトHTML
+　Views\Partial\aplus.htm
+
+
+ーーーーーーーーーーーー
+
+
+個人情報サーバー
+http://192.168.100.126/portal/server/portal_svr_d.aspx?p_id=73&s_id=1672&si_id=
+
+
+-----------------
+
+dynabook kira l93/w9m 
+
+
+------------
+picgif 
+
+-------------
+
+ITパスポート　
+
+-----------------
+投资
+https://www.etoro.com.cn/watchlists
+
+
+免费服务器
+https://secure.xdomain.ne.jp/member/?action_user_server_index=on
+
+xd606247 
+a67134949
+
+
+设计好的网站
+https://liginc.co.jp/designer/archives/11237
+
+
+ITO
+
+酷享物联系统
+lumada
+
+设立外资独资企业
+康柏
+https://www.conpak.com.cn/Services/Japnanese-Customer-Service.html
+
+ガルベラの中国ビジネスサポート
+------------
+
+1/15　
+
+A
+・出荷報告データダウンロードされた時間
+同じ時間帯でダウンロードされたデータ確認可能？
+
+B
+
+・日本語・英語サイト全体的再検証
+
+→楽天ID完了後対応
+
+・英語・日本語クーポンの件　画像？
+
+
+
+★管理画面ダウンロードタイムアウトエラー★
+→検索分け
+
+★タイムアウトエラー確認★
+
+・管理画面商品編集画面に画像の問題について
+
+
+
+
+
+B
+■残タスク優先順位は：
+
+・楽天ID決済追加
+https://192.168.100.219/issues/74624
+→開発中
+
+楽天point利用の場合、ERS伝票総額反映ですが、明細項目がなしです。
+
+
+・簡体繁体サイトのバグ対応
+https://192.168.100.219/issues/64625
+・管理画面商品編集画像問題
+https://192.168.100.219/issues/78804
+・共通アカウント
+https://192.168.100.219/issues/78929
+
+------------------
+
+■やるかどうかまだ決めてない件 （見積書提出済み）
+
+・alipay決済フローの修正
+https://192.168.100.219/issues/69101
+
+・笠原さん速度改善①(66万）
+
+・猪口様：越境サイトへ誘導
+https://192.168.100.219/issues/76993
+
+----------------------
+
+
+
+=IF(A1="","","X"&A1)
+=RIGHT(A1,LEN(A1)-1)
+
+
+copy *Ssyustocktest08*.* syustocktest08\*.*
+
+dir *!* /s
+
+del /q/s *-*.jpg
+
+リスト化：
+DIR /B \\192.168.65.51\wwwroot\jamble\pc\shop\bimg\bizwear>bizwear.txt
+
+-------
+
+http://99lib.net/book/7190/247089.htm
+
+
+①三郷市総合体育館
+②勤労者体育館
+③三郷市立東和東地区文化センター
+
+
+・溧阳房产网　zoycao
+http://www.lyfc001.com/resoldhome/zf/info?id=31457
+・溧阳房产超市　zoyzhouyang
+http://rent.0519.fccs.com/lease/16191241.html
+・58同城溧阳房产　13861094459
+http://liyang.58.com/zufang/32171553758404x.shtml
+・房天下　zoycao
+http://zu.liyang.fang.com/chuzu/1_3113_-1.htm
+
+
+nbz
+
+
+-------------
+2329
+
+----------
+
+白色相,2
+魔龙包冠
+死印
+流行之神1，2
+忍道2
+神秘海域 黄金深渊
+撕纸小邮差（会免）
+无夜之国2（会免）
+               
+
+-------------------------
+
+■リーソス：
+
+①MSサポート
+
+②DC
+岡田さん　azure相談
+
+③工藤 80%
+
+④新垣　30%
+
+⑤山中さん　facebookメッセージ
+
+■リスク
+リリース作業
+
+全体未把握
+
+
+
+■課題→タスク
+rap originFXv1.5 デプロイ
+→山中さん
+他のリスク低減方法？
+
+
+■契約状況
+SBR→SBT→IVP
+
+4月以降
+SBR→IVP（営業：青柳）→IVP（azure）
+
+-----------------
+
+健康保险 厚生年金保险 雇佣保险 所得 住民
